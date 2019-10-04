@@ -46,6 +46,8 @@ def is_user(username)
   user = User.find_by(name: username)
   if user
     system "clear"
+    puts "Welcome back #{user.name}!"
+    puts ""
     main_menu(user)
   else
     while !user
@@ -56,7 +58,7 @@ def is_user(username)
       return_to_selection(username)
     end
     system "clear"
-    puts "Welcome #{user.name}!"
+    puts "Welcome back #{user.name}!"
     puts ""
     main_menu(user)
   end
